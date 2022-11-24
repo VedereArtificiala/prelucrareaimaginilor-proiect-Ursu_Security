@@ -37,7 +37,7 @@ def Recognition(img12,img11):
     loc=np.where(res>=th)
     for pt in zip(*loc[::-1]):
         cv.rectangle(img12,pt,(w1 + pt[0],h1+pt[1]),(0,255,255),2)
-    cv.imshow("Detectat 1",img12) 
+        cv.imshow("Detectat 1",img12) 
     return flag
 
 def RegionDivide(img13,w,h):
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     h, w, c = img.shape
     imggray=ColorToGrayScale(img)
     cv.imshow('Alb-negru',imggray)
-    img3=cv.imread("C:\\Anul3_Semestrul1\\PIMP\\Fig5.03_zgomotSarePiper.jpg")
+    img3=cv.imread("C:\\Anul3_Semestrul1\\PIMP\\Template\\Fig5.03_zgomotSarePiper.jpg")
     h1,w1,c1=img3.shape
     denoised1=Denoising(img3,w1,h1)
     cv.imshow('Fara zgomot',denoised1)
